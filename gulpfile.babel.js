@@ -9,6 +9,8 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+// import haml     from 'gulp-haml';
+var haml = require('gulp-haml');
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -24,9 +26,16 @@ function loadConfig() {
   return yaml.load(ymlFile);
 }
 
+// Get all .haml files in one folder and render
+gulp.task('compileHaml', function () {
+  return gulp.src('./src/pages/haml/*.haml')
+    .pipe(haml())
+    .pipe(gulp.dest('./src/pages/'));
+});
+
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+ gulp.series(clean, gulp.parallel('compileHaml', pages, sass, javascript, images, copy), styleGuide));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -133,8 +142,9 @@ function reload(done) {
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {
   gulp.watch(PATHS.assets, copy);
-  gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
-  gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(resetPages, pages, browser.reload));
+  gulp.watch('src/pages/haml/*.haml').on('all', gulp.series('compileHaml', pages, browser.reload));
+  // gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, browser.reload));
+  gulp.watch('src/{layouts,partials}/**/*.haml').on('all', gulp.series(resetPages, pages, browser.reload));
   gulp.watch('src/assets/scss/**/*.scss').on('all', gulp.series(sass, browser.reload));
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));

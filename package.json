@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
-    "build": "gulp build --production"
+    "build": "gulp build --production",
+    "test": "gulp doHaml"
   },
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
@@ -42,7 +43,12 @@
     "email": "foundation@zurb.com"
   },
   "babel": {
-    "presets": ["es2015"]
+    "presets": [
+      "es2015"
+    ]
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "gulp-haml": "^0.1.6"
+  }
 }
