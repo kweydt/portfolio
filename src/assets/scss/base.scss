@@ -1,0 +1,81 @@
+.strong {
+  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+
+a.red-under {
+  color: $body-font-color;
+  border-bottom: 2px solid red;
+}
+
+.header {
+  background-image: url("../img/kramer-weydt-snow-1170x357.png");
+  background-repeat: no-repeat;
+  @media #{$small-only} {
+    background-size: cover;
+  }
+  .primary-heading {
+    margin-top: 240px;
+    @media #{$small-only} {
+      margin-top: 20px;
+    }
+  }
+}
+
+// Font Sizes
+$KW-xsmall-font: 10;
+$KW-small-font: 12;
+$KW-medium-font: 14;
+$KW-large-font: 18;
+$KW-xlarge-font: 22;
+$KW-xxlarge-font: 28;
+
+// Prepend margin classes
+@for $i from 1 through 10 {
+  .prepend-#{$i} { margin-top: 10px * $i; }
+  .small-prepend-#{$i} {
+    @media #{$small-only} { margin-top: 10px * $i; }
+  }
+  .medium-prepend-#{$i} {
+    @media #{$medium-only} { margin-top: 10px * $i; }
+  }
+  .large-prepend-#{$i} {
+    @media #{$large-up} { margin-top: 10px * $i; }
+  }
+}
+
+@for $i from 1 through 10 {
+  // Append margin classes
+  .append-#{$i} { margin-bottom: 10px * $i; }
+  .small-append-#{$i} {
+    @media #{$small-only} { margin-bottom: 10px * $i; }
+  }
+  .medium-append-#{$i} {
+    @media #{$medium-up} { margin-bottom: 10px * $i; }
+  }
+  .large-append-#{$i} {
+    @media #{$large-up} { margin-bottom: 10px * $i; }
+  }
+
+  // margin classes
+  .margin-#{$i} { margin: 10px * $i; }
+  .margin-left-#{$i} { margin-left: 10px * $i; }
+  .margin-right-#{$i} { margin-right: 10px * $i; }
+
+  // Padding classes
+  .padding-#{$i} { padding: 10px * $i; }
+  .padding-left-#{$i} { padding-left: 10px * $i; }
+  .padding-right-#{$i} { padding-right: 10px * $i; }
+
+  .large-padding-#{$i} {
+    @media #{$large-up} { padding: 10px * $i; }
+  }
+  .small-padding-#{$i} {
+    @media #{$small-only} { padding: 10px * $i; }
+  }
+
+  .ls-border-#{$i} {
+    border-width: $i * 1px;
+    border-style: solid;
+  }
+}
