@@ -1,5 +1,5 @@
 %main
-  .sub-page-header
+  .sub-page-header.self-serve
     .row
       .columns.small-12.medium-5.text-center.prepend-2.append-2
         %a.strong.red-under.sketch-writing(href="/") < Back to the homepage
@@ -14,13 +14,14 @@
         .columns.small-12.medium-10.medium-centered.large-8.large-centered
           .project-heading
             %h1.strong Looksharp Self-Serve Postings
-            %h2.medium-txt Growing self-serve job posting recurring revenue 10x in 6 weeks.
+            %h2.medium-txt Growing self-serve job posting revenue 10x in 6 weeks.
       .row
         .columns.small-12.medium-10.medium-centered.large-8.large-centered
           .property-bar
             .row.small-up-1.medium-up-3
               .column
-                %a.project-url(href="https://www.looksharp.com" target="_blank") Looksharp.com
+                %a.project-url(href="https://www.looksharp.com" target="_blank")
+                  %img(src="/assets/img/looksharp-logo.svg" style="max-width:100px;")
               .column
                 %p.role.text-center VP of Product (Product / Design)
               .column
@@ -54,12 +55,10 @@
             %p
               I knew we needed to better understand why employers weren’t paying to post on our site. Conversations with our self-serve employers revealed
               %span.strong the largest current hurdles to paying to post positions on Looksharp.com:
-            %p
-              %ul
-                %li
-                  %p.no-margin They could go elsewhere to post for free.
-                %li
-                  %p.no-margin The reluctance to pay $99 for 30 days of exposure when you might get 1 applicant or 200 applicants.
+            .handwritten-box
+              %h5 Nuggets From My Notes:
+              %p They could go elsewhere to post for free.
+              %p.no-margin The reluctance to pay $99 for 30 days of exposure when you might get 1 applicant or 200 applicants.
 
       %section
         .row
@@ -119,7 +118,8 @@
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
             %p.prepend-2
               We quickly built and launched with the basic pay-per-applicant model extremely quickly and found quite a bit of success.
-              %span.strong Within the first month after launch we began seeing $400 days (up from $60 days with the previous model).
+              %blockquote.large
+                %em Within the first month after launch we began seeing $400 days (up from $60 days with the previous model).
             %p
               After the initial launch it became painfully clear through product feedback channels that we still had at least 1 major concern to address on the behalf of employers - the quality of applicants.
               %span.strong Employers were concerned that we were simply going to go find just anyone on the internet to apply to their position and then charge them for it.
@@ -137,13 +137,22 @@
             %p Initially, we were filling about 40% of the budget we had available to fill from self-serve postings. In other words, we were delivering 40% of the maximum number of applicants, or actualizing 40% of the potential revenue available to us.
             %p
               We began to test ideas for growing both the available budget and the rate at which the positions were applied for. We tested the syndication of these listings out to other marketplaces (Indeed, etc.), tweaked our search algorithm to boost these postings on our marketplace, and started sending out highly personalized emails to potential applicants for these positions. The result?
-              %span.strong We drove the fill rate up to 70% and pushed our monthly recurring revenue from self-serve to $11k (from $1.8k).
+              %blockquote.large
+                %em We drove the fill rate up to 70% and pushed our monthly revenue from self-serve to $11k (from $1.8k) in 6 weeks.
 
         .row
           .columns.small-12.medium-12.large-10.large-centered
             %img.center-img(src="/assets/img/self-serve-rev-graph.svg")
 
-            %hr
-            %a.float-left(href="/") Homepage
-            %a.float-right(href="#") Next Project
+      %section.append-2
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %h3.sub-header Key Takeaways & Reminders
+            .handwritten-box
+              %p Alignment between business goals and the job your users are hiring you to do is absolutely critical to unlocking scalable monetization.
+              %p Building trust and communicating with users can be more difficult than solving their problems.
+              %p Trust in a sound design process that involves the user at every step along the way.
 
+            %hr
+            %a.red-under.sketch-writing.float-left(href="/") Homepage
+            %a.red-under.sketch-writing.float-right(href="#") Next Project

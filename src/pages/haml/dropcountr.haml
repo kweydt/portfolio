@@ -1,0 +1,143 @@
+%main
+  .sub-page-header.dropcountr
+    .row
+      .columns.small-12.medium-5.text-center.prepend-2.append-2
+        %a.strong.red-under.sketch-writing(href="/") < Back to the homepage
+      .columns.small-12.medium-2.text-center.prepend-2
+        %p.strong.no-margin.sketch-writing OR
+      .columns.small-12.medium-5.end.text-center.prepend-2.append-2
+        %a.strong.red-under.sketch-writing(href="/") Check out a different project
+
+  %article.project-story.row
+    .columns.small-11.small-centered
+      .row
+        .columns.small-12.medium-10.medium-centered.large-8.large-centered
+          .project-heading
+            %h1.strong Dropcountr
+            %h2 Encouraging consumer water conservation.
+      .row
+        .columns.small-12.medium-10.medium-centered.large-8.large-centered
+          .property-bar
+            .row.small-up-1.medium-up-3
+              .column
+                %a.project-url(href="https://www.dropcountr.com" target="_blank")
+                  %img(src="/assets/img/dropcountr-logo.png" style="max-width:100px;")
+              .column
+                %p.role.text-center UX Design Consultant
+              .column
+                %p.year.text-right 2013
+
+
+      %section
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %h3.sub-header Project Context
+            %p
+              Dropcountr's founder, Robb Barnitt, approached me knowing only that he wanted to create an app to get consumers to reduce their daily water consumption.
+            %p
+              We agreed that I would
+              %span.strong help Robb design a needs-driven, digital water conservation product that he could pitch to investors and technical talent
+              so that he could start his company and reduce consumer water consumption.
+
+      %section
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %h3.sub-header Research
+            %p
+              Robb laid out that there were 2 primary stakeholders involved in the water conservation equation: the water utilities and consumers. Water utilities were already motivated to reduce consumer water usage due to government legislation that would penalize them if they failed to reduce water consumption by 20% by 2020.
+            %p
+              That left the consumers as the major mystery.
+              %span.strong I kicked off the project by reaching out to people across the country to understand their awareness of their water usage, the importance of convservation, and what actions they were taking to modify their water consumption.
+            / %ul
+            /   %li
+            /     %p.no-margin How aware consumers were of their water usage
+            /     %ul
+            /       %li
+            /         %em What information did they know off the top of their head?
+            /       %li
+            /         %em What were their actual usage numbers?
+            /   %li.prepend-2
+            /     %p.no-margin How important water conservation actually was to them
+            /     %ul
+            /       %li
+            /         %em Why did they believe water conservation was important / unimportant?
+            /       %li
+            /         %em What actions supported their claims?
+            /   %li.prepend-2
+            /     %p.no-margin What information they were getting about their usage and from whom
+            /     %ul
+            /       %li
+            /         %em Where these sources trustworthy? Why / why not?
+            /       %li
+            /         %em What information did they wish they had?
+            /   %li.prepend-2
+            /     %p.no-margin What actions, if any, were they taking to reduce water consumption?
+            /     %ul
+            /       %li
+            /         %em Why were they taking those actions?
+            /       %li
+            /         %em What motivated them?
+
+        / .row
+        /   .columns.small-12.medium-10.medium-centered.large-8.large-centered
+        /     %p.prepend-2
+        /       I supplemented that with market research to understand what other products were attempting to reduce consumer water consumption. I also looked at why other strong players in the conservation space (OPower) were so heavily focused energy conservation and not water conservation and what I could learn from their implementation.
+
+        .row
+          .columns.small-12.medium-12.large-10.large-centered
+            %img.center-img(src="/assets/img/dropcountr-research.png")
+
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %p.prepend-2
+              I discovered that, in general, people just wanted to be average with respect to their water usage. Most people simply didn't care enough or feel enough pain from their small water bill to strive to be anything but average.
+              %span.strong I would have to leverage this desire to simply be average to motivate consumers to reduce their usage.
+
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            .handwritten-box.prepend-2
+              %h5 Problem Statements:
+              %p As a water utility decision maker I need to reduce consumer water usage by 20% so that I avoid penalties and I feel accomplished at my work.
+              %p.no-margin As a water bill payer I want to have predictable and average water usage so that I have one less thing to worry about and I feel stable and accepted.
+
+      %section
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %h3.sub-header Solving the Problem
+            %p
+              After many thorough brainstorming sessions with Robb, we decided that designing a mobile experience for consumers that would persuade them to reduce their water consumption was the way to go.
+              %span.strong Focusing on building an app with persuasive push notification and email feedback loops would allow us to shorten the time between water usage and impact as much as possible.
+            %p First, I focused on designing the core mobile application that would be the center of the experience. It would provide access to real-time water usage data, competitive comparisons (to push to achieve 'average' consumption), and a concept of a built-in farming game for the kids in a family that would teach them about water conservation and usage. Their performance in the game would depend on their household's actual usage. I also created a login experience that leveraged 'priming' and the user's inherent curiosity to drive account creation.
+
+        .row
+          .columns.small-12.medium-12.large-10.large-centered
+            %img.center-img(src="/assets/img/dropcountr-app.png")
+
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %p.prepend-2 I then focused on creating a compelling weekly email that used leaderboards and anchoring to engage consumers on a recurring basis and encourage them to open the mobile application and engage with the game.
+
+        .row
+          .columns.small-12.medium-12.large-10.large-centered
+            %img.center-img(src="/assets/img/dropcountr-email.png")
+
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %p.prepend-2
+              Finally, I moved on to designing the push notification experience that would engage the users when usage anomalies were detected, goal progress was made on conservation goals, game progress was made, or bills were due.
+
+        .row
+          .columns.small-12.medium-12.large-10.large-centered
+            %img.center-img(src="/assets/img/dropcountr-push-notifications.jpg")
+
+      %section.append-2
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %h3.sub-header Key Takeaways & Reminders
+            .handwritten-box
+              %p Changing human behavior without inherent motivation is extremely difficult. Only attempt to do this if you're absolutely certain it's in the user's best interest.
+              %p.no-margin A user's attention and interest are finite. Often, apathy and sloth are the biggest hurdles a design will have to clear.
+
+            %hr
+            %a.red-under.sketch-writing.float-left(href="/") Homepage
+            %a.red-under.sketch-writing.float-right(href="#") Next Project

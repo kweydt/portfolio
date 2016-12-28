@@ -1,5 +1,5 @@
 %main
-  .sub-page-header
+  .sub-page-header.recruiter
     .row
       .columns.small-12.medium-5.text-center.prepend-2.append-2
         %a.strong.red-under.sketch-writing(href="/") < Back to the homepage
@@ -20,7 +20,8 @@
           .property-bar
             .row.small-up-1.medium-up-3
               .column
-                %a.project-url(href="https://www.looksharp.com/employers/products/looksharp-recruiter" target="_blank") Looksharp.com
+                %a.project-url(href="https://www.looksharp.com/employers/products/looksharp-recruiter" target="_blank")
+                  %img(src="/assets/img/looksharp-logo.svg" style="max-width:100px;")
               .column
                 %p.role.text-center VP of Product (Product / Design)
               .column
@@ -31,25 +32,17 @@
         .row
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
             %h3.sub-header First, a Little Context
-            %p Looksharp aims to launch the career of every student. Employers big and small come to Looksharp to hire talented interns and recent graduates.
-
-        .row
-          .columns.small-12.medium-12.large-10.large-centered
-            %img.center-img(src="/assets/img/looksharp-diagram-650x138.png")
-
-        .row
-          .columns.small-12.medium-10.medium-centered.large-8.large-centered
-            %p.prepend-2
-              When companies went online to hire great students and recent grads, they went to Looksharp.
-              %span.strong However, despite our best efforts, we couldn't kill the on-campus recruiting efforts.
-              Employers were still inefficiently spending loads of money to blindly travel across the country to select schools, staff a booth at a career fair, and get their opportunity to pitch their company to thousands of students that weren't great fits.
+            %p
+              When companies go online to hire great students and recent grads, they go to Looksharp.
+              %span.strong However, despite our best efforts at Looksharp, most companies were still going on-campus to recruit.
+              Employers were still inefficiently spending loads of money to blindly travel across the country to select schools, staff a booth at a career fair, and get their opportunity to pitch their company to thousands of students that they were never going to hire.
 
       %section
         .row
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
             %h3.sub-header Observation and Problem Definition
             %p
-              We knew that on-campus recruiting was an antiquated and incredibly painful and inefficient process for both students and employers.
+              We knew that on-campus recruiting was an antiquated, incredibly painful, and inefficient process for both students and employers.
               %span.strong I headed onto some local campuses and snuck into several career fairs in an effort to observe and speak with both recruiters and students.
 
         .row
@@ -59,17 +52,13 @@
         .row
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
             %p.prepend-2
-              I learned that
-              %span.strong recruiters
-              were frustrated with the inefficiency of on-campus recruiting and feeling overworked. Their
-              %span.strong managers
-              were starting to think about trying to figure out which event performed best, but had no idea how to think about the problem.
+              I learned that recruiters were frustrated with the inefficiency of on-campus recruiting and feeling overworked. Their
+              managers were starting to think about trying to figure out which event performed best, but had no idea how to think about the problem.
             %p
-              %span.strong The students
-              felt the entire process was forced, superficial, and generally dream crushing. Printing their resume, trying to stand out in a public, forced environment, and hoping to hear anything back from anyone was incredibly frustrating.
+              The students felt the entire process was forced, superficial, and generally dream crushing. Printing their resume, trying to stand out in a public, forced environment, and hoping to hear anything back from anyone was incredibly frustrating.
             .handwritten-box
               %h5 From My Notes:
-              %p 1. On-campus recruiting exists because it always has. Nobody is questioning the practicality or thinking analytically about it.
+              %p 1. On-campus recruiting exists because it always has. Hardly anyone on the ground is questioning the practicality of it or thinking analytically about it.
               %p 2. The subjective assessment of a student's "fit" with a company is the only valuable and unique aspect of on-campus recruiting.
               %p.no-margin 3. Resume collection and follow-up are incredibly painful. Recruiters scribble notes on hundreds of paper resumes and scan them into their system later.
             %p.prepend-2
@@ -85,77 +74,96 @@
             %p
               Ultimately, we felt that given our team's skillset we felt that
               %span.strong this was a prime opportunity for us to build a mobile app to help facilitate the exchange of information and capture the recruiter's subjective analysis of the student.
+
+        .row
+          .columns.small-12.medium-12.large-10.large-centered
+            %img.center-img(src="/assets/img/recruiter-app-sketch.png")
+
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
             %p
               At the time, the biggest design challenge we then faced was figuring out how to get the student's resume (or coursework and work history data) in the employer's hands. We experimented with text-based exchanges, custom portable scanners, and all manners of complicated systems. We landed on a simple system that required the employer to enter the student's email address into a mobile app and we'd follow-up with an email to the student asking them to upload their resume.
-              %span.strong This modification of the typical
+
+        .row
+          .columns.small-12.medium-12.large-10.large-centered
+            %img.center-img(src="/assets/img/recruiter-app-followup-sketch.png")
+
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %blockquote.large.prepend-4
+              %em This re-working of the experience allowed the recruiter to focus on connecting with the student in a more human manner and eliminated the need for paper resumes all together.
 
       %section
         .row
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
-            %h3.sub-header Fleshing Out the Plan
-            %p Changing our business model was going to be a costly investment, so the first task was to ensure that the idea resonated with our employer audience. I began sketching out potential workflows and used them to run the concept past employers.
+            %h3.sub-header Real World Feedback
+            %p The design for the app felt solid, but there was no way to be certain short of putting a real prototype in the hands of a recruiter on campus. We spun up a lightweight Ionic app and convinced a couple long-time customers of our online marketplace to give it a shot at an event.
 
         .row
           .columns.small-12.medium-12.large-10.large-centered
-            %img.center-img(src="/assets/img/ls-self-serve-flow-900x675.jpg")
+            %img.center-img(src="/assets/img/recruiter-in-use.jpg")
 
         .row
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
-            %p.prepend-2 It quickly became obvious that once understood, the pay-par-applicant model was a good fit. Unfortunately, it wasn't the easiest model to explain to the average SMB owner. They were used to paying a flat rate and understanding a new model was an overwhelming task.
-            %p Where I didn't expect them to get hung up was in setting a budget for their position. It took many iterations to figure out the best way to communicate the idea of usage-based payment.
+            %p.prepend-2 It became immediately obvious that the basic product was solid and functional, but that several aspects still needed to be ironed out.
+            .handwritten-box
+              %p 1. Typing a student's email address was difficult. By the end of the day, the recruiter was handing their phone over to the student to input the email address.
+              %p 2. Phones are personal devices and not all employers were comfortable with the idea of handing over their phone to a student.
+              %p 3. Recruiters were still concerned about resume collection. They wanted to take pictures of the resumes, not rely on the student to upload it.
+              %p.no-margin 4. The data collected needed to be accessible and actionable immediately after the event.
 
         .row
-          .columns.small-12.medium-12.large-10.large-centered
-            %img.center-img(src="/assets/img/ls-self-serve-900x542.jpg")
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %p.prepend-2 We began to iteratively address the concerns and get more employers to give the app a shot. Career fairs were not only a great place for us to observe our app in use, but to market the app directly to the target audience.
+            %p Ultimately, we opted to leave the resume workflow as it was. Recruiters wanted to use the app to take photos of resumes on the spot, but we believed that enabling that behavior would de-humanize the interaction with the student and they wouldn't end up using it anyways.
 
       %section
         .row
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
-            %h3.sub-header The Launch
-            %p After iterating through sketches and getting input on the most confusing aspects of the model switch, I dove into higher fidelity designs.
+            %h3.sub-header Growth
+            %p Within the first year, we had over 80 enterprise companies try the product on campus. 26 of them became engaged users and continued to use the product at all of their on-campus events.
+            %p We had over 40,000 students added at 526 events in just 3 recruiting seasons with the product.
 
         .row
           .columns.small-12.medium-12.large-10.large-centered
-            .row.small-up-1.medium-up-3.gallery
-              .column
-                %a.thumbnail(href="#" data-featherlight="/assets/img/ls-self-serve-postings-dash.png")
-                  %img.center-img(src="/assets/img/ls-self-serve-postings-dash.png")
-              .column
-                %span.thumbnail(href="#")
-                  %img.center-img(src="/assets/img/ls-self-serve-postings-create.png")
-              .column
-                %span.thumbnail(href="#")
-                  %img.center-img(src="/assets/img/ls-self-serve-postings-payment.png")
+            %img.center-img(src="/assets/img/recruiter-crm-combo.png")
 
         .row
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
-            %p.prepend-2
-              We quickly built and launched with the basic pay-per-applicant model extremely quickly and found quite a bit of success.
-              %span.strong Within the first month after launch we began seeing $400 days (up from $60 days with the previous model).
-            %p
-              After the initial launch it became painfully clear through product feedback channels that we still had at least 1 major concern to address on the behalf of employers - the quality of applicants.
-              %span.strong Employers were concerned that we were simply going to go find just anyone on the internet to apply to their position and then charge them for it.
-            %p In response, we quickly iterated into an applicant restrictions feature that allowed employers, for a slight increase in cost, to restrict who could apply for their positions. If a student on our site wasn't qualified to apply for their position, they wouldn't even see it in search results.
+            %p.prepend-2 As the product matured, we began to focus more intently on the candidate management workflows. I began to spend my days talking with employers about how we could save them time and enable them to impress their superiors. The complexity of these often custom workflows was impressive. However, that also meant that the opportunity to simplify things was quite large.
+            %blockquote.large
+              %em I began mapping out these workflows based on time spent and candidate volume.
 
         .row
           .columns.small-12.medium-12.large-10.large-centered
-            %img.center-img(src="/assets/img/ls-self-serve-2.png")
+            %img.prepend-2.center-img(src="/assets/img/crm-workflows.png")
+
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %p.prepend-2 These led to significant redesigns of the CRM experience (where employers managed their candidates) with plans for automating a majority of these tasks.
+
+        .row
+          .columns.small-12.medium-12.large-10.large-centered
+            %img.center-img(src="/assets/img/crm-blue.png")
 
       %section.append-2
         .row
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
-            %h3.sub-header Iterative Improvement
-            %p Given the success of the pay-per-applicant model, the clear next step was to find ways to iteratively grow the available budget in our marketplace from these postings and drive additional quality applicants to those positions.
-            %p Initially, we were filling about 40% of the budget we had available to fill from self-serve postings. In other words, we were delivering 40% of the maximum number of applicants, or actualizing 40% of the potential revenue available to us.
-            %p
-              We began to test ideas for growing both the available budget and the rate at which the positions were applied for. We tested the syndication of these listings out to other marketplaces (Indeed, etc.), tweaked our search algorithm to boost these postings on our marketplace, and started sending out highly personalized emails to potential applicants for these positions. The result?
-              %span.strong We drove the fill rate up to 70% and pushed our monthly recurring revenue from self-serve to $11k (from $1.8k).
+            %h3.sub-header In the End
+            %p Unfortunately, after a few seasons, we stopped iterating on the product and devoted our time and energy back towards our initial core product, the internships and jobs marketplace.
+            %blockquote.large
+              %em Our company strategy shifted towards breaking even and away from rapid growth. With that, our inability to easily monetize the Recruiter product led to it's downfall.
+            %p We still had 15 paying companies using the product at each event, but we simply weren't able to acquire new companies at the same rate. The market for this product wasn't huge to begin with, but it was even smaller than we had initially imagined. Our major competitor ate up the Fortune 500 companies and inked 2-3 year contracts with them, so we didn't have access to the largest college recruiting budgets (which were already quite small) when the time came for us to focus on monetization.
 
+      %section.append-2
         .row
-          .columns.small-12.medium-12.large-10.large-centered
-            %img.center-img(src="/assets/img/self-serve-rev-graph.svg")
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %h3.sub-header Key Takeaways & Reminders
+            .handwritten-box
+              %p Products are built within a larger context. Had we built this product earlier or when we had easier access to additional capital, it might have been a success.
+              %p.no-margin Test monetization hypotheses early and often.
 
             %hr
-            %a.float-left(href="/") Homepage
-            %a.float-right(href="#") Next Project
+            %a.red-under.sketch-writing.float-left(href="/") Homepage
+            %a.red-under.sketch-writing.float-right(href="#") Next Project
 

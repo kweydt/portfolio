@@ -1,0 +1,100 @@
+%main
+  .sub-page-header.dropcountr
+    .row
+      .columns.small-12.medium-5.text-center.prepend-2.append-2
+        %a.strong.red-under.sketch-writing(href="/") < Back to the homepage
+      .columns.small-12.medium-2.text-center.prepend-2
+        %p.strong.no-margin.sketch-writing OR
+      .columns.small-12.medium-5.end.text-center.prepend-2.append-2
+        %a.strong.red-under.sketch-writing(href="/") Check out a different project
+
+  %article.project-story.row
+    .columns.small-11.small-centered
+      .row
+        .columns.small-12.medium-10.medium-centered.large-8.large-centered
+          .project-heading
+            %h1.strong Patient Facesheet
+            %h2 Patients at a glance.
+      .row
+        .columns.small-12.medium-10.medium-centered.large-8.large-centered
+          .property-bar
+            .row.small-up-1.medium-up-3
+              .column
+                %a.project-url(href="https://www.practicefusion.com" target="_blank")
+                  %img(src="/assets/img/pf-logo.jpg" style="max-width:100px;")
+              .column
+                %p.role.text-center Senior UX Designer
+              .column
+                %p.year.text-right 2012
+
+
+      %section
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %h3.sub-header Project Context
+            %p
+              Practice Fusion is an electronic health record (EHR) product designed to enable private practices to manage their patients and patient records digitally.
+            %p
+              Perhaps the most important view in the entire product is the patient facesheet - or patient summary. This the first screen a doctor or nurse sees when they pull up a patient's data.
+              %span.strong The facesheet is meant to provide an overview of a patient's health at a glance and help the doctor or nurse decide what they should do next with the patient.
+            %p Practice Fusion's old facesheet at the start of this project looked something like this:
+
+        .row
+          .columns.small-12.medium-12.large-10.large-centered
+            %img.center-img(src="/assets/img/pf-facesheet-old.png")
+
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %p.prepend-2
+              Health records often contain immense amounts of information that a nurse or doctor must absorb as quickly and accurrately as possible. The original facesheet in Practice Fusion is text-heavy (making it difficult to scan) and only contains a current snapshot of the patient's status (making it incredibly hard to see trends or abnormalities). Thus, we decided to
+              %span.strong Redesign the patient facesheet
+              to enable providers (nurses, doctors, etc.) to see a current snapshot of the patient as well as overall health trends in a lightweight, scannable manner.
+
+      %section
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %h3.sub-header The New Facesheet
+            %p
+              I redesigned the facesheet to do several things in particular:
+            .handwritten-box
+              %ul.append-1
+                %li
+                  %em Graphically show vital data over time to help the providers spot trends over time (particularly in chronic patients)
+                %li.prepend-1
+                  %em Communicate the length of time a patient had been on certain medications and had certain diagnoses via graphical time lines to allow the provider to quickly differentiate recent diagnoses/meds from old ones and chronic diagnoses/meds from distinct ones.
+                %li.prepend-1
+                  %em Highlight the chief complaint (the reason the patient was being seen at the time) so that the provider had the context for the visit front and center.
+                %li.prepend-1
+                  %em Create actions directly on the facesheet that would allow providers to add diagnoses, meds, etc. from the facesheet.
+
+        .row
+          .columns.small-12.medium-12.large-10.large-centered
+            %img.center-img.prepend-2(src="/assets/img/pf-facesheet.png")
+
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %p.prepend-2
+              Another major improvement of this design was the ability for the provider to click on any of the diagnoses or medications and see just a little more information without going all the way back to the original note where a provider created the diagnosis or medication.
+            %p For example, this drill-down modal view for a diagnosis contained medications relevant to a diagnosis, any events or vitals that might be relevant to the diagnosis, and labs that the provider could add as pertinent to the diagnosis. From this modal, the provider could drill down further into the notes if they wanted, but for over 80% of the cases, that wasn't necessary.
+
+        .row
+          .columns.small-12.medium-12.large-10.large-centered
+            %img.center-img(src="/assets/img/pf-dx-modal.png")
+
+      %section
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %h3.sub-header Results
+            %p
+              These designs were not implemented directly by Practice Fusion but continue to be used as a vision for the facesheet within their iterative product development process.
+
+      %section.append-2
+        .row
+          .columns.small-12.medium-10.medium-centered.large-8.large-centered
+            %h3.sub-header Key Takeaways & Reminders
+            .handwritten-box
+              %p Design is an essential vehicle for creating excitement and unity around a shared vision for a product.
+
+            %hr
+            %a.red-under.sketch-writing.float-left(href="/") Homepage
+            %a.red-under.sketch-writing.float-right(href="#") Next Project

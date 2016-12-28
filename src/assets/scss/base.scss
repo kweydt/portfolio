@@ -7,6 +7,14 @@
   font-family: "Gloria Hallelujah", Georgia, serif;
 }
 
+blockquote.large {
+  font-size: 28px;
+
+  @media #{$small-only} {
+    font-size: 18px;
+  }
+}
+
 .red-under {
   color: $body-font-color;
   border-bottom: 2px solid red;
@@ -69,6 +77,30 @@
     background-size: cover;
     padding-top: 10px;
   }
+
+  &.recruiter {
+    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,1.0)), url("../img/recruiter-in-use.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  &.self-serve {
+    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,1.0)), url("../img/company-profile-hero.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  &.dropcountr {
+    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,1.0)), url("../img/dropcountr-bg.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  &.dropcountr {
+    background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,1.0)), url("../img/pf-dx-modal.png");
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .project-heading {
@@ -80,7 +112,7 @@
   }
 
   h1 { font-size: 48px; }
-  h2 { font-size: 18px; }
+  h2 { font-size: 24px; }
 }
 
 .property-bar {
@@ -116,6 +148,12 @@
 
 .no-margin {
   margin: 0;
+}
+
+.no-margin-small {
+  @media #{$small-only} {
+    margin: 0;
+  }
 }
 
 // Font Sizes
