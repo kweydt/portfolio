@@ -1,4 +1,51 @@
 %main
+  #project-switching-interface(style="padding-bottom:20px; border-bottom: 1px solid #e7e7e7;")
+    .projects(style="margin-top:10px;")
+      .row
+        .columns.small-12.medium-10.medium-offset-1
+          %h3.append-2 Featured In-Depth Projects
+      .row
+        .columns.small-12.medium-5.medium-offset-1
+          %a.row.project(href="/looksharp-marketplace.html")
+            .columns.small-3.medium-4
+              .crop-container(style="overflow:hidden; max-height: 150px; max-width:150px;")
+                %img(src="/assets/img/ls-self-serve-2.png")
+            .columns.small-9.medium-8
+              %h4.strong Self-Serve Postings
+              %p.no-margin-small Growing monthly self-serve job posting revenue 10x in 6 weeks.
+              %p
+                %em VP of Product @ Looksharp in 2016
+        .columns.small-12.medium-5.end
+          %a.row.project(href="/looksharp-recruiter.html")
+            .columns.small-3.medium-4
+              %img(src="/assets/img/recruiter-in-hand.jpg")
+            .columns.small-9.medium-8
+              %h4.strong Looksharp Recruiter
+              %p.no-margin-small Putting the ‘human’ back in ‘human resources’ for college recruiters.
+              %p
+                %em VP of Product @ Looksharp in 2015
+      .row
+        .columns.small-12.medium-5.medium-offset-1
+          %a.row.project(href="/dropcountr.html")
+            .columns.small-3.medium-4
+              .crop-container(style="overflow:hidden; max-height: 150px; max-width:150px;")
+                %img(src="/assets/img/dropcountr-app-thumb.jpg")
+            .columns.small-9.medium-8
+              %h4.strong Dropcountr
+              %p.no-margin-small Encouraging consumer water conservation.
+              %p
+                %em UX Design Consultant @ Dropcountr in 2013
+        .columns.small-12.medium-5.end
+          %a.row.project(href="/patient-facesheet.html")
+            .columns.small-3.medium-4
+              .crop-container(style="overflow:hidden; max-height: 150px; max-width:150px;")
+                %img(src="/assets/img/pf-facesheet.png")
+            .columns.small-9.medium-8
+              %h4.strong Patient Facesheet
+              %p.no-margin-small Scannable and actionable patient summary.
+              %p
+                %em UX Design @ Practice Fusion in 2012
+
   .sub-page-header.recruiter
     .row
       .columns.small-12.medium-5.text-center.prepend-2.append-2
@@ -6,7 +53,7 @@
       .columns.small-12.medium-2.text-center.prepend-2
         %p.strong.no-margin.sketch-writing OR
       .columns.small-12.medium-5.end.text-center.prepend-2.append-2
-        %a.strong.red-under.sketch-writing(href="/") Check out a different project
+        %a.project-switcher.strong.red-under.sketch-writing Check out a different project
 
   %article.project-story.row
     .columns.small-11.small-centered
@@ -34,7 +81,7 @@
             %h3.sub-header First, a Little Context
             %p
               When companies go online to hire great students and recent grads, they go to Looksharp.
-              %span.strong However, despite our best efforts at Looksharp, most companies were still going on-campus to recruit.
+              %span.strong> However, despite our best efforts at Looksharp, most companies were still going on-campus to recruit.
               Employers were still inefficiently spending loads of money to blindly travel across the country to select schools, staff a booth at a career fair, and get their opportunity to pitch their company to thousands of students that they were never going to hire.
 
       %section
@@ -43,7 +90,7 @@
             %h3.sub-header Observation and Problem Definition
             %p
               We knew that on-campus recruiting was an antiquated, incredibly painful, and inefficient process for both students and employers.
-              %span.strong I headed onto some local campuses and snuck into several career fairs in an effort to observe and speak with both recruiters and students.
+              %span.strong> I headed onto some local campuses and snuck into several career fairs in an effort to observe and speak with both recruiters and students.
 
         .row
           .columns.small-12.medium-12.large-10.large-centered
@@ -62,7 +109,7 @@
               %p 2. The subjective assessment of a student's "fit" with a company is the only valuable and unique aspect of on-campus recruiting.
               %p.no-margin 3. Resume collection and follow-up are incredibly painful. Recruiters scribble notes on hundreds of paper resumes and scan them into their system later.
             %p.prepend-2
-              %span.strong It was clear that these were problems that were well aligned with our mission to launch the career of every student.
+              %span.strong> It was clear that these were problems that were well aligned with our mission to launch the career of every student.
               These were problems we should be solving.
 
       %section
@@ -73,7 +120,7 @@
               With such a broad set of problems available to solve, it was difficult to know where to start. I led ideation sessions with the team that produced plentry of great ideas ranging from services provided by universities to facilitate smoother information exchange to mobile apps that help employers and students connect and exchange data.
             %p
               Ultimately, we felt that given our team's skillset we felt that
-              %span.strong this was a prime opportunity for us to build a mobile app to help facilitate the exchange of information and capture the recruiter's subjective analysis of the student.
+              %span.strong> this was a prime opportunity for us to build a mobile app to help facilitate the exchange of information and capture the recruiter's subjective analysis of the student.
 
         .row
           .columns.small-12.medium-12.large-10.large-centered
@@ -165,5 +212,5 @@
 
             %hr
             %a.red-under.sketch-writing.float-left(href="/") Homepage
-            %a.red-under.sketch-writing.float-right(href="#") Next Project
+            %a.red-under.sketch-writing.float-right(href="dropcountr.html") Next Project
 

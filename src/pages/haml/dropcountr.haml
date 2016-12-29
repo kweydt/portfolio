@@ -1,4 +1,51 @@
 %main
+  #project-switching-interface(style="padding-bottom:20px; border-bottom: 1px solid #e7e7e7;")
+    .projects(style="margin-top:10px;")
+      .row
+        .columns.small-12.medium-10.medium-offset-1
+          %h3.append-2 Featured In-Depth Projects
+      .row
+        .columns.small-12.medium-5.medium-offset-1
+          %a.row.project(href="/looksharp-marketplace.html")
+            .columns.small-3.medium-4
+              .crop-container(style="overflow:hidden; max-height: 150px; max-width:150px;")
+                %img(src="/assets/img/ls-self-serve-2.png")
+            .columns.small-9.medium-8
+              %h4.strong Self-Serve Postings
+              %p.no-margin-small Growing monthly self-serve job posting revenue 10x in 6 weeks.
+              %p
+                %em VP of Product @ Looksharp in 2016
+        .columns.small-12.medium-5.end
+          %a.row.project(href="/looksharp-recruiter.html")
+            .columns.small-3.medium-4
+              %img(src="/assets/img/recruiter-in-hand.jpg")
+            .columns.small-9.medium-8
+              %h4.strong Looksharp Recruiter
+              %p.no-margin-small Putting the ‘human’ back in ‘human resources’ for college recruiters.
+              %p
+                %em VP of Product @ Looksharp in 2015
+      .row
+        .columns.small-12.medium-5.medium-offset-1
+          %a.row.project(href="/dropcountr.html")
+            .columns.small-3.medium-4
+              .crop-container(style="overflow:hidden; max-height: 150px; max-width:150px;")
+                %img(src="/assets/img/dropcountr-app-thumb.jpg")
+            .columns.small-9.medium-8
+              %h4.strong Dropcountr
+              %p.no-margin-small Encouraging consumer water conservation.
+              %p
+                %em UX Design Consultant @ Dropcountr in 2013
+        .columns.small-12.medium-5.end
+          %a.row.project(href="/patient-facesheet.html")
+            .columns.small-3.medium-4
+              .crop-container(style="overflow:hidden; max-height: 150px; max-width:150px;")
+                %img(src="/assets/img/pf-facesheet.png")
+            .columns.small-9.medium-8
+              %h4.strong Patient Facesheet
+              %p.no-margin-small Scannable and actionable patient summary.
+              %p
+                %em UX Design @ Practice Fusion in 2012
+
   .sub-page-header.dropcountr
     .row
       .columns.small-12.medium-5.text-center.prepend-2.append-2
@@ -6,7 +53,7 @@
       .columns.small-12.medium-2.text-center.prepend-2
         %p.strong.no-margin.sketch-writing OR
       .columns.small-12.medium-5.end.text-center.prepend-2.append-2
-        %a.strong.red-under.sketch-writing(href="/") Check out a different project
+        %a.project-switcher.strong.red-under.sketch-writing Check out a different project
 
   %article.project-story.row
     .columns.small-11.small-centered
@@ -36,7 +83,7 @@
               Dropcountr's founder, Robb Barnitt, approached me knowing only that he wanted to create an app to get consumers to reduce their daily water consumption.
             %p
               We agreed that I would
-              %span.strong help Robb design a needs-driven, digital water conservation product that he could pitch to investors and technical talent
+              %span.strong> help Robb design a needs-driven, digital water conservation product that he could pitch to investors and technical talent
               so that he could start his company and reduce consumer water consumption.
 
       %section
@@ -47,7 +94,7 @@
               Robb laid out that there were 2 primary stakeholders involved in the water conservation equation: the water utilities and consumers. Water utilities were already motivated to reduce consumer water usage due to government legislation that would penalize them if they failed to reduce water consumption by 20% by 2020.
             %p
               That left the consumers as the major mystery.
-              %span.strong I kicked off the project by reaching out to people across the country to understand their awareness of their water usage, the importance of convservation, and what actions they were taking to modify their water consumption.
+              %span.strong> I kicked off the project by reaching out to people across the country to understand their awareness of their water usage, the importance of convservation, and what actions they were taking to modify their water consumption.
             / %ul
             /   %li
             /     %p.no-margin How aware consumers were of their water usage
@@ -91,7 +138,7 @@
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
             %p.prepend-2
               I discovered that, in general, people just wanted to be average with respect to their water usage. Most people simply didn't care enough or feel enough pain from their small water bill to strive to be anything but average.
-              %span.strong I would have to leverage this desire to simply be average to motivate consumers to reduce their usage.
+              %span.strong> I would have to leverage this desire to simply be average to motivate consumers to reduce their usage.
 
         .row
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
@@ -106,7 +153,7 @@
             %h3.sub-header Solving the Problem
             %p
               After many thorough brainstorming sessions with Robb, we decided that designing a mobile experience for consumers that would persuade them to reduce their water consumption was the way to go.
-              %span.strong Focusing on building an app with persuasive push notification and email feedback loops would allow us to shorten the time between water usage and impact as much as possible.
+              %span.strong> Focusing on building an app with persuasive push notification and email feedback loops would allow us to shorten the time between water usage and impact as much as possible.
             %p First, I focused on designing the core mobile application that would be the center of the experience. It would provide access to real-time water usage data, competitive comparisons (to push to achieve 'average' consumption), and a concept of a built-in farming game for the kids in a family that would teach them about water conservation and usage. Their performance in the game would depend on their household's actual usage. I also created a login experience that leveraged 'priming' and the user's inherent curiosity to drive account creation.
 
         .row
@@ -140,4 +187,4 @@
 
             %hr
             %a.red-under.sketch-writing.float-left(href="/") Homepage
-            %a.red-under.sketch-writing.float-right(href="#") Next Project
+            %a.red-under.sketch-writing.float-right(href="/patient-facesheet.html") Next Project

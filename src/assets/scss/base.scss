@@ -1,10 +1,24 @@
+@font-face {
+  font-family: 'AvenirNext';
+  src: url('AvenirNext-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AvenirNextDemiBold';
+  src: url('AvenirNext-DemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Gloria';
+  src: url('GloriaHallelujah.ttf') format('truetype');
+}
+
 .strong {
-  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-family: "AvenirNextDemiBold", Helvetica, Arial, sans-serif;
 }
 
 .sketch-writing {
-  font-family: "Gloria Hallelujah", Georgia, serif;
+  font-family: "Gloria", Georgia, serif;
 }
 
 blockquote.large {
@@ -132,7 +146,7 @@ blockquote.large {
 }
 
 .sub-header {
-  font-family: "Avenir Next", Helvetica, Arial, sans-serif;
+  font-family: "AvenirNext", Helvetica, Arial, sans-serif;
   font-weight: 600;
 
   margin-top: 30px;

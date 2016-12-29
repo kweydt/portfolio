@@ -1,4 +1,51 @@
 %main
+  #project-switching-interface(style="padding-bottom:20px; border-bottom: 1px solid #e7e7e7;")
+    .projects(style="margin-top:10px;")
+      .row
+        .columns.small-12.medium-10.medium-offset-1
+          %h3.append-2 Featured In-Depth Projects
+      .row
+        .columns.small-12.medium-5.medium-offset-1
+          %a.row.project(href="/looksharp-marketplace.html")
+            .columns.small-3.medium-4
+              .crop-container(style="overflow:hidden; max-height: 150px; max-width:150px;")
+                %img(src="/assets/img/ls-self-serve-2.png")
+            .columns.small-9.medium-8
+              %h4.strong Self-Serve Postings
+              %p.no-margin-small Growing monthly self-serve job posting revenue 10x in 6 weeks.
+              %p
+                %em VP of Product @ Looksharp in 2016
+        .columns.small-12.medium-5.end
+          %a.row.project(href="/looksharp-recruiter.html")
+            .columns.small-3.medium-4
+              %img(src="/assets/img/recruiter-in-hand.jpg")
+            .columns.small-9.medium-8
+              %h4.strong Looksharp Recruiter
+              %p.no-margin-small Putting the ‘human’ back in ‘human resources’ for college recruiters.
+              %p
+                %em VP of Product @ Looksharp in 2015
+      .row
+        .columns.small-12.medium-5.medium-offset-1
+          %a.row.project(href="/dropcountr.html")
+            .columns.small-3.medium-4
+              .crop-container(style="overflow:hidden; max-height: 150px; max-width:150px;")
+                %img(src="/assets/img/dropcountr-app-thumb.jpg")
+            .columns.small-9.medium-8
+              %h4.strong Dropcountr
+              %p.no-margin-small Encouraging consumer water conservation.
+              %p
+                %em UX Design Consultant @ Dropcountr in 2013
+        .columns.small-12.medium-5.end
+          %a.row.project(href="/patient-facesheet.html")
+            .columns.small-3.medium-4
+              .crop-container(style="overflow:hidden; max-height: 150px; max-width:150px;")
+                %img(src="/assets/img/pf-facesheet.png")
+            .columns.small-9.medium-8
+              %h4.strong Patient Facesheet
+              %p.no-margin-small Scannable and actionable patient summary.
+              %p
+                %em UX Design @ Practice Fusion in 2012
+
   .sub-page-header.dropcountr
     .row
       .columns.small-12.medium-5.text-center.prepend-2.append-2
@@ -6,7 +53,7 @@
       .columns.small-12.medium-2.text-center.prepend-2
         %p.strong.no-margin.sketch-writing OR
       .columns.small-12.medium-5.end.text-center.prepend-2.append-2
-        %a.strong.red-under.sketch-writing(href="/") Check out a different project
+        %a.project-switcher.strong.red-under.sketch-writing Check out a different project
 
   %article.project-story.row
     .columns.small-11.small-centered
@@ -36,7 +83,7 @@
               Practice Fusion is an electronic health record (EHR) product designed to enable private practices to manage their patients and patient records digitally.
             %p
               Perhaps the most important view in the entire product is the patient facesheet - or patient summary. This the first screen a doctor or nurse sees when they pull up a patient's data.
-              %span.strong The facesheet is meant to provide an overview of a patient's health at a glance and help the doctor or nurse decide what they should do next with the patient.
+              %span.strong> The facesheet is meant to provide an overview of a patient's health at a glance and help the doctor or nurse decide what they should do next with the patient.
             %p Practice Fusion's old facesheet at the start of this project looked something like this:
 
         .row
@@ -47,7 +94,7 @@
           .columns.small-12.medium-10.medium-centered.large-8.large-centered
             %p.prepend-2
               Health records often contain immense amounts of information that a nurse or doctor must absorb as quickly and accurrately as possible. The original facesheet in Practice Fusion is text-heavy (making it difficult to scan) and only contains a current snapshot of the patient's status (making it incredibly hard to see trends or abnormalities). Thus, we decided to
-              %span.strong Redesign the patient facesheet
+              %span.strong> Redesign the patient facesheet
               to enable providers (nurses, doctors, etc.) to see a current snapshot of the patient as well as overall health trends in a lightweight, scannable manner.
 
       %section
@@ -97,4 +144,4 @@
 
             %hr
             %a.red-under.sketch-writing.float-left(href="/") Homepage
-            %a.red-under.sketch-writing.float-right(href="#") Next Project
+            %a.red-under.sketch-writing.float-right(href="looksharp-marketplace.html") Next Project
