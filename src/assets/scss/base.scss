@@ -60,8 +60,8 @@ blockquote.large {
     display: inline-block;
     color: #333;
 
-    h4 {
-
+    h4:hover {
+      color: $anchor-color-hover;
     }
   }
 
@@ -110,7 +110,7 @@ blockquote.large {
     background-position: center;
   }
 
-  &.dropcountr {
+  &.patient-facesheet {
     background-image: linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,1.0)), url("../img/pf-dx-modal.png");
     background-size: cover;
     background-position: center;
