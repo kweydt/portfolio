@@ -52,7 +52,6 @@ blockquote.large {
 .projects {
   margin-top: 60px; }
   .projects .project {
-    display: inline-block;
     color: #333; }
     .projects .project h4:hover {
       color: #1585cf; }
