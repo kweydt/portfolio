@@ -67,6 +67,15 @@ blockquote.large {
 .project-story p, .project-story a {
   font-size: 22px; }
 
+.pf-thumb {
+  @media screen and (max-width: 39.9375em) { height: 75px; }
+}
+
+.crop-container {
+  margin-left: -0.9375rem;
+  @media screen and (max-width: 39.9375em) { margin-left: -0.625rem; } 
+}
+
 .sub-page-header {
   min-height: 300px;
   background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.9)), url("../img/kramer-weydt-snow-1170x357.png");
