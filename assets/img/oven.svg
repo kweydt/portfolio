@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="218px" height="231px" viewBox="0 0 218 231" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="97.3214286%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#E1EEF7" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="218" height="49"></rect>
+        <mask id="mask-3" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="218" height="49" fill="white">
+            <use xlink:href="#path-2"></use>
+        </mask>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#E1EEF7" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-5" x="0" y="48" width="218" height="183"></rect>
+        <mask id="mask-6" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="218" height="183" fill="white">
+            <use xlink:href="#path-5"></use>
+        </mask>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-7">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-8" x="13" y="55" width="193" height="127" rx="4"></rect>
+        <mask id="mask-9" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="193" height="127" fill="white">
+            <use xlink:href="#path-8"></use>
+        </mask>
+        <rect id="path-10" x="79" y="7" width="64" height="32" rx="4"></rect>
+        <mask id="mask-11" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="64" height="32" fill="white">
+            <use xlink:href="#path-10"></use>
+        </mask>
+        <rect id="path-12" x="13" y="55" width="193" height="11"></rect>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-13">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.2 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <mask id="mask-14" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="193" height="11" fill="white">
+            <use xlink:href="#path-12"></use>
+        </mask>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="100%" id="linearGradient-15">
+            <stop stop-color="#F7F7F7" offset="0%"></stop>
+            <stop stop-color="#E9E9E9" offset="50.7052417%"></stop>
+            <stop stop-color="#F7F7F7" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-16" x="8" y="55" width="203" height="11"></rect>
+        <mask id="mask-17" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="203" height="11" fill="white">
+            <use xlink:href="#path-16"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group">
+            <use id="Rectangle-3" stroke="#E1EDF6" mask="url(#mask-3)" stroke-width="2" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            <use id="Rectangle" stroke="#E1EDF6" mask="url(#mask-6)" stroke-width="2" fill="url(#linearGradient-4)" xlink:href="#path-5"></use>
+            <use id="Rectangle-2" stroke="#E7E7E7" mask="url(#mask-9)" stroke-width="2" fill="url(#linearGradient-7)" xlink:href="#path-8"></use>
+            <circle id="Oval" stroke="#D0DEE8" fill="#FFFFFF" cx="24.5" cy="23.5" r="8.5"></circle>
+            <use id="Rectangle-4" stroke="#D0DEE8" mask="url(#mask-11)" stroke-width="2" fill="#FFFFFF" xlink:href="#path-10"></use>
+            <circle id="Oval-Copy" stroke="#D0DEE8" fill="#FFFFFF" cx="54.5" cy="23.5" r="8.5"></circle>
+            <circle id="Oval-Copy-2" stroke="#D0DEE8" fill="#FFFFFF" cx="162.5" cy="23.5" r="8.5"></circle>
+            <circle id="Oval-Copy-3" stroke="#D0DEE8" fill="#FFFFFF" cx="192.5" cy="23.5" r="8.5"></circle>
+            <g id="Rectangle-5-Copy">
+                <use fill="black" fill-opacity="1" filter="url(#filter-13)" xlink:href="#path-12"></use>
+                <use stroke="#E7E7E7" mask="url(#mask-14)" stroke-width="2" fill="#F7F7F7" fill-rule="evenodd" xlink:href="#path-12"></use>
+            </g>
+            <use id="Rectangle-5" stroke="#E7E7E7" mask="url(#mask-17)" stroke-width="2" fill="url(#linearGradient-15)" xlink:href="#path-16"></use>
+            <path d="M12.859375,57.890625 C12.859375,57.890625 7.25,103.101563 61.2226562,141.324219 C115.195313,179.546875 204.429687,181.308594 204.429687,181.308594 C204.429687,181.308594 16.3916016,181.308594 14.8876953,179.875977 C13.3837891,178.443359 12.859375,57.890625 12.859375,57.890625 Z" id="Path-2" fill-opacity="0.3" fill="#F6F6F6" transform="translate(108.561471, 119.599609) scale(-1, 1) translate(-108.561471, -119.599609) "></path>
+        </g>
+    </g>
+</svg>
