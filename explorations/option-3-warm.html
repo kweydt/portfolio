@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kramer Weydt — Product Design Leader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbf8f4;
+    --ink: #2a2825;
+    --muted: #6e6862;
+    --soft: #efe9e0;
+    --accent: #b85c38;
+    --sage: #7a8466;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 0 32px; }
+
+  /* Nav */
+  nav.top {
+    padding: 24px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  nav.top .name {
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    font-weight: 400;
+  }
+  nav.top a { color: var(--ink); text-decoration: none; margin-left: 24px; }
+  nav.top a:hover { color: var(--accent); }
+
+  /* Hero */
+  .hero { padding: 72px 0 64px; }
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--soft);
+    color: var(--ink);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+  .pill .dot {
+    width: 6px; height: 6px;
+    background: var(--sage);
+    border-radius: 50%;
+  }
+  h1 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: clamp(40px, 6vw, 68px);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    margin: 0 0 24px;
+  }
+  h1 em { font-style: italic; color: var(--accent); }
+  .lede {
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink);
+    max-width: 660px;
+    margin: 0 0 32px;
+  }
+  .lede strong { font-weight: 600; color: var(--accent); }
+  .quick {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .quick span::before { content: "→ "; color: var(--accent); }
+
+  /* Section */
+  section { padding: 56px 0; }
+  h2 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 32px;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  h2 em { font-style: italic; color: var(--accent); }
+  .sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 32px;
+  }
+
+  /* About */
+  .about p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0 0 18px;
+  }
+  .about p em { font-style: italic; color: var(--accent); }
+  .about p:last-child { margin-bottom: 0; }
+
+  /* Work cards */
+  .work-list { display: flex; flex-direction: column; gap: 0; }
+  .work-card {
+    border-top: 1px solid var(--soft);
+    padding: 32px 0;
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 32px;
+  }
+  .work-card:last-child { border-bottom: 1px solid var(--soft); }
+  .work-card .meta {
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .work-card .meta .yr {
+    color: var(--ink);
+    font-weight: 500;
+    margin-bottom: 4px;
+    display: block;
+  }
+  .work-card h3 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 26px;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  .work-card .co {
+    font-size: 13px;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+  .work-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  .work-card p strong { color: var(--ink); font-weight: 600; }
+  .work-card .nda {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  @media (max-width: 720px) {
+    .work-card { grid-template-columns: 1fr; gap: 12px; }
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 48px;
+    padding: 64px 0 80px;
+    background: var(--soft);
+  }
+  footer h3 {
+    font-family: 'Instrument Serif', serif;
+    font-weight: 400;
+    font-size: 36px;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+  }
+  footer h3 em { font-style: italic; color: var(--accent); }
+  footer p { color: var(--muted); margin: 0 0 24px; max-width: 520px; }
+  .links { display: flex; gap: 20px; flex-wrap: wrap; font-size: 15px; }
+  .links a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 1px;
+  }
+  .links a:hover { color: var(--accent); }
+  .credit {
+    margin-top: 48px;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid rgba(0,0,0,0.08);
+    padding-top: 24px;
+  }
+
+  .banner {
+    position: fixed;
+    bottom: 16px; right: 16px;
+    background: var(--ink); color: var(--bg);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border-radius: 999px;
+    z-index: 99;
+  }
+</style>
+</head>
+<body>
+
+<nav class="top wrap">
+  <div class="name">Kramer Weydt</div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#contact">Say hi</a>
+  </div>
+</nav>
+
+<section class="hero wrap">
+  <div class="pill"><span class="dot"></span> Senior Director, Product Design at Salesforce</div>
+  <h1>Eighteen years of leading UX for software that <em>refuses to be simple.</em></h1>
+  <p class="lede">I lead product design at <strong>Salesforce / MuleSoft</strong> — currently for an integration and AI platform you've probably touched without realizing it. Before that: New Relic, Freckle, Looksharp, Practice Fusion, Netflix, Intuit. Startup to enterprise, IC to 40-person org, design to product management. Stanford product design grad. Quietly opinionated, occasionally surprised.</p>
+  <div class="quick">
+    <span>~18 yrs design + product</span>
+    <span>2 acquisitions</span>
+    <span>Covered VP for a 40-person org</span>
+    <span>Still close to the craft</span>
+  </div>
+</section>
+
+<section class="wrap" style="padding: 56px 0; border-top: 1px solid var(--soft);">
+  <h2>What I'm <em>thinking about</em></h2>
+  <p class="sub">A working POV, not a finished one.</p>
+  <p style="font-size: 19px; line-height: 1.65; max-width: 700px; margin: 0 0 16px;">Enterprise software is mid-earthquake. The lines between <strong style="color:var(--accent)">design, product, and the people who build it</strong> are getting blurry — in ways that make a lot of senior leaders nervous, and that I find genuinely interesting.</p>
+  <p style="font-size: 19px; line-height: 1.65; max-width: 700px; margin: 0 0 16px;">My take: UX leaders win the next decade by tightening feedback loops and laying down <strong style="color:var(--accent)">artifacts that scale</strong> — design systems, rules, gates — so quality is the default outcome even when no designer is in the room.</p>
+  <p style="font-size: 19px; line-height: 1.65; max-width: 700px; margin: 0; color: var(--accent); font-style: italic;">Not done working it out, but that's where my chips are.</p>
+</section>
+
+<section id="about" class="wrap about">
+  <h2>A bit <em>about me</em></h2>
+  <p class="sub">The short version, written by the only person willing to.</p>
+  <p>I grew up in rural Montana — graduating class of <em>32</em> — and went to Stanford for product design. The combination of "small town" and "design school" turned out to be useful: I learned early that the people using your product usually have something better to do, and that's not their problem to fix.</p>
+  <p>The last ~18 years have taken me across more disciplines than I planned — design, product management, a little front-end, marketing, support, QA. At small companies someone had to wear the extra hats, and I tended to volunteer. <strong>Two of my companies were acquired.</strong> I covered a VP role for a 40-person UX org during a leadership transition. The work that's mine to claim is the strategy, the team, and the judgment calls; the execution belongs to the people I've been lucky to lead.</p>
+  <p>What I try to bring is curiosity, a low tolerance for buzzwords, opinionated empathy, and a willingness to be wrong out loud. I still review pixels, still write the strategy doc, still ship the occasional bit of production code (this site, for one) — though I'd never call myself an engineer.</p>
+</section>
+
+<section id="work" class="wrap">
+  <h2>Selected <em>work</em></h2>
+  <p class="sub">A short list. The longer one is on LinkedIn.</p>
+
+  <div class="work-list">
+
+    <article class="work-card">
+      <div class="meta">
+        <span class="yr">2021 — Now</span>
+        Sr. Director,<br>Product Design<br>(Interim VP, '24)
+      </div>
+      <div>
+        <div class="co">Salesforce</div>
+        <h3>Leading UX for an integration &amp; AI platform you've probably touched.</h3>
+        <span class="nda">Mostly under NDA</span>
+        <p>Leading design for MuleSoft's core platform and emerging AI &amp; agentic experiences. Held the team to a high quality bar through a full platform reimagining, an org reorg, and a <strong>~40% capacity reduction</strong> — and shipped on time. Also covered a <strong>VP role</strong> for a 40-person UX org during a leadership transition; the team's culture and pace held through it.</p>
+      </div>
+    </article>
+
+    <article class="work-card">
+      <div class="meta">
+        <span class="yr">2018 — 2021</span>
+        Director / Sr. Manager,<br>Product Design
+      </div>
+      <div>
+        <div class="co">New Relic</div>
+        <h3>Growth and self-serve in a category infamous for not converting.</h3>
+        <p>Led design for <strong>growth and self-serve</strong> in observability. Reframed onboarding around the moment a developer first saw value, not the moment they finished a setup wizard. The new motion converted <strong>meaningfully better than the prior pattern</strong> — a partnership win with research and engineering.</p>
+      </div>
+    </article>
+
+    <article class="work-card">
+      <div class="meta">
+        <span class="yr">2017 — 2018</span>
+        Head of<br>Product &amp; Design
+      </div>
+      <div>
+        <div class="co">Freckle by Renaissance</div>
+        <h3>Adaptive learning for K-8 — and a team I still think about.</h3>
+        <p>Owned product vision and strategy for an adaptive learning platform serving millions of students. Acquired by <strong>Renaissance Learning</strong>. The thing I'm proudest of is the team's tempo: fast, iterative, kind to each other — that came from the culture we built together.</p>
+      </div>
+    </article>
+
+    <article class="work-card">
+      <div class="meta">
+        <span class="yr">2013 — 2017</span>
+        Head of<br>Product &amp; Design<br>(via Lead, Director)
+      </div>
+      <div>
+        <div class="co">Looksharp (acq. WayUp)</div>
+        <h3>10x revenue on self-serve. 1.5x on enterprise. 13x paid funnel.</h3>
+        <p>Started as Lead Designer, ended running product, design, marketing, front-end, support, and QA. Led the rebrand from InternMatch to Looksharp. Drove a program of <strong>40+ A/B tests</strong> for a 20% lift in registrations. Launched a mobile recruiter app to 80+ enterprise accounts in year one. The startup era I learned the most in.</p>
+      </div>
+    </article>
+
+    <article class="work-card">
+      <div class="meta">
+        <span class="yr">2011 — 2013</span>
+        Senior UX Designer
+      </div>
+      <div>
+        <div class="co">Practice Fusion</div>
+        <h3>Tablet-based EHR, back when that was a wild idea.</h3>
+        <p>UX, visual, and front-end on electronic health records — a category where bad UX has actual clinical consequences, which kept the work honest. Grew the design team from 2 to 5, established the qualitative research practice, set the design process for a 120-person company.</p>
+      </div>
+    </article>
+
+    <article class="work-card">
+      <div class="meta">
+        <span class="yr">2011</span>
+        Senior Interaction Designer
+      </div>
+      <div>
+        <div class="co">Netflix</div>
+        <h3>Yes, the Qwikster one.</h3>
+        <p>Two months on the navigation and IA for the Qwikster mobile site and the Qwikster–Netflix integration. The product never shipped. The lessons did.</p>
+      </div>
+    </article>
+
+    <article class="work-card">
+      <div class="meta">
+        <span class="yr">2008 — 2011</span>
+        Sr. Interaction Designer<br>(via Interaction Designer)
+      </div>
+      <div>
+        <div class="co">Intuit</div>
+        <h3>QuickBooks Online when it was still figuring itself out.</h3>
+        <p>Interaction design lead for QuickBooks Online (marketing site and app), then mobile lead for the websites division and lead designer on Customer Manager — a small business CRM that taught me how often <strong>"the user wants the thing they don't want to admit they want."</strong> First real design job — and I'm still grateful to the mentors who took me seriously before I'd earned it.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h3>Want to <em>talk shop?</em></h3>
+    <p>I'm not actively looking, but I always make time for an honest conversation about UX leadership, enterprise software, or what it's like to lead a design org through an AI-shaped earthquake.</p>
+    <div class="links">
+      <a href="mailto:kweydt@salesforce.com">kweydt@salesforce.com</a>
+      <a href="https://www.linkedin.com/in/kweydt">LinkedIn</a>
+      <a href="https://www.behance.net/kweydt">Behance archive</a>
+    </div>
+    <div class="credit">© Kramer Weydt · Portland, OR · This site is built and designed by me, in HTML, like it's 2007 again.</div>
+  </div>
+</footer>
+
+<div class="banner">Opt 3 · Warm modernist</div>
+
+</body>
+</html>

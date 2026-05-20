@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KRAMER WEYDT // UX</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ededed;
+    --ink: #0a0a0a;
+    --muted: #555;
+    --rule: #0a0a0a;
+    --accent: #ff3b00;
+    --pad: 24px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0;
+    border-bottom: 2px solid var(--ink);
+  }
+  .cell {
+    border-right: 2px solid var(--ink);
+    padding: var(--pad);
+  }
+  .cell:last-child { border-right: 0; }
+  .span-12 { grid-column: span 12; }
+  .span-8 { grid-column: span 8; }
+  .span-6 { grid-column: span 6; }
+  .span-4 { grid-column: span 4; }
+  .span-3 { grid-column: span 3; }
+  @media (max-width: 900px) {
+    .span-8, .span-6, .span-4, .span-3 { grid-column: span 12; border-right: 0; border-bottom: 2px solid var(--ink); }
+  }
+
+  header {
+    background: var(--ink);
+    color: var(--bg);
+    padding: 16px var(--pad);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--ink);
+  }
+  header a { color: var(--bg); text-decoration: none; margin-left: 24px; }
+  header a:hover { color: var(--accent); }
+  header .blink {
+    width: 8px; height: 8px;
+    background: var(--accent);
+    display: inline-block;
+    margin-right: 8px;
+    animation: blink 1.5s infinite;
+  }
+  @keyframes blink { 50% { opacity: 0.3; } }
+
+  /* Hero */
+  .hero {
+    padding: 80px var(--pad);
+    border-bottom: 2px solid var(--ink);
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(56px, 11vw, 160px);
+    font-weight: 700;
+    line-height: 0.92;
+    letter-spacing: -0.04em;
+    margin: 0 0 24px;
+    text-transform: uppercase;
+  }
+  h1 .x { color: var(--accent); }
+  .lede {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    max-width: 700px;
+    margin: 0;
+    line-height: 1.6;
+  }
+  .lede mark {
+    background: var(--accent);
+    color: var(--bg);
+    padding: 1px 4px;
+  }
+
+  /* Tag row */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border-bottom: 2px solid var(--ink);
+  }
+  .tag {
+    padding: 14px var(--pad);
+    border-right: 2px solid var(--ink);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .tag.acc { background: var(--ink); color: var(--bg); }
+
+  /* Sections */
+  section { padding: 64px var(--pad); border-bottom: 2px solid var(--ink); }
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin: 0 0 32px;
+    font-weight: 700;
+  }
+  h2 span { color: var(--accent); }
+
+  .about p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    max-width: 900px;
+    margin: 0 0 20px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .about p strong { background: var(--accent); color: var(--bg); padding: 0 4px; font-weight: 500; }
+
+  /* Work table */
+  .work-row {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 80px;
+    gap: 24px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--ink);
+    align-items: start;
+  }
+  .work-row:last-child { border-bottom: 0; }
+  .work-row .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .work-row .co {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .work-row .role {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .work-row .desc {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  .work-row .desc strong { background: var(--accent); color: var(--bg); padding: 0 4px; font-weight: 500; }
+  .work-row .yr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: right;
+  }
+  .work-row .nda {
+    display: inline-block;
+    background: var(--ink);
+    color: var(--bg);
+    padding: 2px 6px;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+  @media (max-width: 720px) {
+    .work-row { grid-template-columns: 1fr; gap: 8px; }
+    .work-row .yr { text-align: left; }
+  }
+
+  footer {
+    padding: 48px var(--pad);
+    background: var(--ink);
+    color: var(--bg);
+    font-size: 13px;
+  }
+  footer a { color: var(--bg); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  footer a:hover { color: var(--accent); }
+  footer .row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+  footer .big {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 32px;
+  }
+
+  .banner {
+    position: fixed;
+    bottom: 16px; right: 16px;
+    background: var(--accent); color: var(--ink);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 8px 14px;
+    border: 2px solid var(--ink);
+    z-index: 99;
+    font-weight: 700;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span><span class="blink"></span>KRAMER WEYDT // UX LEADER // PORTLAND, OR</span>
+  <nav>
+    <a href="#about">ABOUT</a>
+    <a href="#work">WORK</a>
+    <a href="mailto:kweydt@salesforce.com">CONTACT</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>UX FOR<br>SOFTWARE<br>THAT'S HARD<span class="x">.</span></h1>
+  <p class="lede">~18 years leading product design across <mark>startup &amp; enterprise</mark>. Currently Sr. Director at Salesforce/MuleSoft — leading UX for an integration &amp; AI platform you've touched without realizing it. Previously: New Relic, Freckle, Looksharp, Practice Fusion, Netflix, Intuit. Stanford product design. Still occasionally writing CSS at midnight — though I'd never call myself an engineer.</p>
+</section>
+
+<div class="tags">
+  <div class="tag acc">UX LEADERSHIP</div>
+  <div class="tag">PRODUCT MGMT</div>
+  <div class="tag">ENTERPRISE + STARTUP</div>
+  <div class="tag">AI / AGENTIC</div>
+  <div class="tag">GROWTH / SELF-SERVE</div>
+  <div class="tag">PLAYER-COACH</div>
+</div>
+
+<section style="padding: 72px var(--pad); background: var(--ink); color: var(--bg); border-bottom: 2px solid var(--ink);">
+  <h2 style="color: var(--bg);"><span style="color:var(--accent)">00 //</span> WHAT I'M THINKING ABOUT</h2>
+  <p style="font-family: 'Space Grotesk', sans-serif; font-size: 32px; line-height: 1.35; letter-spacing: -0.01em; max-width: 1000px; margin: 0 0 20px; font-weight: 400;">Enterprise software is mid-earthquake. The lines between <span style="background:var(--accent); color:var(--ink); padding: 0 4px;">design, product, and the people who build it</span> are getting blurry.</p>
+  <p style="font-family: 'Space Grotesk', sans-serif; font-size: 24px; line-height: 1.4; max-width: 900px; margin: 0 0 20px; font-weight: 400;">My take: UX leaders win the next decade by tightening feedback loops and laying down <span style="background:var(--accent); color:var(--ink); padding: 0 4px;">artifacts that scale</span> — design systems, rules, gates — so quality is the default outcome even when no designer is in the room.</p>
+  <p style="font-family: 'JetBrains Mono', monospace; font-size: 13px; color: rgba(255,255,255,0.7); margin: 0;">→ NOT DONE WORKING IT OUT. THAT'S WHERE MY CHIPS ARE.</p>
+</section>
+
+<section id="about" class="about">
+  <h2><span>01 //</span> ABOUT</h2>
+  <p>Rural Montana, graduating class of <strong>32</strong>. Stanford product design. Eighteen years across <strong>startup &amp; enterprise</strong>, IC to 40-person org, design to product management. At small companies someone had to wear the extra hats — I tended to volunteer.</p>
+  <p><strong>Two acquisitions.</strong> Covered a VP role for a 40-person UX org during a leadership transition. Currently leading UX for a platform that handles integration plumbing for a meaningful slice of the Fortune 500. The work that's mine to claim is the strategy, the team, and the judgment calls — the execution belongs to the people I've been lucky to lead.</p>
+  <p>What I try to bring: curiosity, a low tolerance for buzzwords, opinionated empathy, and a willingness to be wrong out loud.</p>
+</section>
+
+<section id="work">
+  <h2><span>02 //</span> SELECTED WORK</h2>
+
+  <div class="work-row">
+    <div class="num">01</div>
+    <div>
+      <div class="co">Salesforce / MuleSoft</div>
+      <div class="role">Sr. Director, Product Design — Interim VP</div>
+      <div class="nda">UNDER NDA</div>
+    </div>
+    <div class="desc">Leading UX for an integration &amp; AI platform you've probably touched without realizing it. Held the team to a high quality bar through a full platform reimagining, an org reorg, and a <strong>~40% capacity reduction</strong> — and shipped on time. Also covered a VP role for a 40-person UX org during a leadership transition; the team's culture and pace held through it.</div>
+    <div class="yr">2021 →</div>
+  </div>
+
+  <div class="work-row">
+    <div class="num">02</div>
+    <div>
+      <div class="co">New Relic</div>
+      <div class="role">Director / Sr. Mgr, Product Design</div>
+    </div>
+    <div class="desc">Led design for <strong>growth and self-serve</strong> in observability — a category infamous for not converting. Reframed onboarding around the moment a developer first saw value, not the moment they finished a setup wizard. <strong>Converted meaningfully better than the prior pattern.</strong> A partnership win with research and engineering.</div>
+    <div class="yr">2018 → 2021</div>
+  </div>
+
+  <div class="work-row">
+    <div class="num">03</div>
+    <div>
+      <div class="co">Freckle by Renaissance</div>
+      <div class="role">Head of Product &amp; Design</div>
+    </div>
+    <div class="desc">Adaptive K-8 learning. Owned product vision and strategy for a platform serving millions of students. Acquired by Renaissance Learning. The thing I'm proudest of: <strong>the team's tempo</strong> — fast, iterative, kind to each other. That came from the culture we built together.</div>
+    <div class="yr">2017 → 2018</div>
+  </div>
+
+  <div class="work-row">
+    <div class="num">04</div>
+    <div>
+      <div class="co">Looksharp</div>
+      <div class="role">Head of Product &amp; Design (acq. by WayUp)</div>
+    </div>
+    <div class="desc">Started as Lead Designer, ended running product, design, marketing, front-end, support, and QA. <strong>10x revenue on self-serve. 1.5x on enterprise. 13x paid funnel.</strong> Drove a program of 40+ A/B tests for a 20% lift in registrations. Mobile recruiter app to 80+ enterprise accounts in year one. Led the rebrand from InternMatch. The startup era I learned the most in.</div>
+    <div class="yr">2013 → 2017</div>
+  </div>
+
+  <div class="work-row">
+    <div class="num">05</div>
+    <div>
+      <div class="co">Practice Fusion</div>
+      <div class="role">Senior UX Designer</div>
+    </div>
+    <div class="desc">Tablet-based EHR — a category where bad UX has actual clinical consequences, which kept the work honest. Grew the design team from 2 to 5, stood up the qualitative research practice, set the design process for a 120-person company.</div>
+    <div class="yr">2011 → 2013</div>
+  </div>
+
+  <div class="work-row">
+    <div class="num">06</div>
+    <div>
+      <div class="co">Netflix</div>
+      <div class="role">Senior Interaction Designer</div>
+    </div>
+    <div class="desc"><strong>Yes, the Qwikster one.</strong> Two months on nav &amp; IA for the Qwikster mobile site and the Qwikster–Netflix integration. The product never shipped. The lessons did.</div>
+    <div class="yr">2011</div>
+  </div>
+
+  <div class="work-row">
+    <div class="num">07</div>
+    <div>
+      <div class="co">Intuit</div>
+      <div class="role">Sr. Interaction Designer / IxD</div>
+    </div>
+    <div class="desc">QuickBooks Online when it was still finding itself. Then mobile lead for the websites division and lead designer on Customer Manager (small business CRM). First real design job — and I'm still grateful to the mentors who took me seriously before I'd earned it.</div>
+    <div class="yr">2008 → 2011</div>
+  </div>
+</section>
+
+<footer>
+  <div class="big">LET'S TALK<span style="color:var(--accent)">.</span></div>
+  <div class="row">
+    <div>
+      <a href="mailto:kweydt@salesforce.com">KWEYDT@SALESFORCE.COM</a><br>
+      <a href="https://www.linkedin.com/in/kweydt">LINKEDIN</a> · <a href="https://www.behance.net/kweydt">BEHANCE ARCHIVE</a>
+    </div>
+    <div>© KRAMER WEYDT<br>PORTLAND, OR</div>
+  </div>
+</footer>
+
+<div class="banner">OPT 2 · BRUTALIST</div>
+
+</body>
+</html>

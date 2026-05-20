@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio explorations — Kramer Weydt</title>
+<style>
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #1a1a1a;
+    color: #f5f5f5;
+    padding: 48px 32px;
+    line-height: 1.6;
+  }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  h1 { font-size: 32px; margin: 0 0 8px; font-weight: 700; }
+  .sub { color: #999; margin: 0 0 40px; font-size: 16px; }
+  .opts { display: grid; gap: 16px; }
+  .opt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 28px;
+    background: #2a2a2a;
+    border-radius: 10px;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #f5f5f5;
+    transition: all 0.15s;
+  }
+  .opt:hover {
+    background: #333;
+    border-color: #ff7755;
+    transform: translateX(4px);
+  }
+  .opt h2 { margin: 0 0 4px; font-size: 20px; font-weight: 600; }
+  .opt p { margin: 0; color: #aaa; font-size: 14px; }
+  .opt .arrow { color: #ff7755; font-size: 24px; }
+  .note {
+    margin-top: 48px;
+    padding: 20px 24px;
+    background: #2a2a2a;
+    border-left: 3px solid #ff7755;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #bbb;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Portfolio direction explorations</h1>
+  <p class="sub">Same content. Four different vibes. Open each, sit with it for 30 seconds, then tell me which feels like you.</p>
+
+  <div class="opts">
+    <a class="opt" href="option-1-editorial.html">
+      <div>
+        <h2>Option 1 · Editorial</h2>
+        <p>NYT/long-read energy. Serif headlines (Fraunces), cream paper, deep rust accent. Confident. Senior. A little dignified. Joel Califa-adjacent.</p>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="opt" href="option-2-brutalist.html">
+      <div>
+        <h2>Option 2 · Brutalist</h2>
+        <p>Heavy mono, hard grid, electric orange accent, big uppercase headlines. Confident-bordering-on-aggressive. Reads like a senior IC who's done. Nothing soft about it.</p>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="opt" href="option-3-warm.html">
+      <div>
+        <h2>Option 3 · Warm modernist</h2>
+        <p>Soft sans, generous whitespace, italic display serif (Instrument), terracotta + sage. Approachable but senior. Closest to Sonia/Marissa territory but more grown-up.</p>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+
+    <a class="opt" href="option-4-zine.html">
+      <div>
+        <h2>Option 4 · Zine</h2>
+        <p>Personal newspaper / clipping aesthetic. Italic serif headlines, handwriting marginalia, paper-on-paper feel. Voice-forward — leans hardest into the snark. Most personality, most risk.</p>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <div class="note">
+    All four use the same content baseline: vague Salesforce nod (NDA framing), New Relic self-serve emphasized, Intuit without the patent, no writing section, snarky/authentic voice throughout. Pick one (or a hybrid) and I'll build it out into the real site at <code>~/personal-git/portfolio</code> and push to GitHub Pages.
+  </div>
+</div>
+</body>
+</html>
